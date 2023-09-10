@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS 1//Ctrl+kÔÙ°´Ctrl+f¿ÉÒÔ¿ìËÙ¶ÔÆë´úÂë
+#define _CRT_SECURE_NO_WARNINGS 1//Ctrl+kå†æŒ‰Ctrl+få¯ä»¥å¿«é€Ÿå¯¹é½ä»£ç 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -9,18 +9,18 @@ struct Library
 	float price;
 	int length;
 };
-//µ¥Á´±í½á¹¹
+//å•é“¾è¡¨ç»“æ„
 typedef struct Node {
-	struct Library data;//Êı¾İÓò
-	struct Node* next;//Ö¸ÕëÓò
+	struct Library data;//æ•°æ®åŸŸ
+	struct Node* next;//æŒ‡é’ˆåŸŸ
 };
-//µ¥Á´±í³õÊ¼»¯
+//å•é“¾è¡¨åˆå§‹åŒ–
 struct Node* CreatLinkList()
 {
-	struct Node* ListNode = (struct Node*)malloc(sizeof(struct Node));//mallocÓÃµ½ÁË<stdlib.h>Í·ÎÄ¼ş
+	struct Node* ListNode = (struct Node*)malloc(sizeof(struct Node));//mallocç”¨åˆ°äº†<stdlib.h>å¤´æ–‡ä»¶
 	if (ListNode == NULL)
 	{
-		printf("ÄÚ´æ·ÖÅäÊ§°Ü£¡\a\n");
+		printf("å†…å­˜åˆ†é…å¤±è´¥ï¼\a\n");
 		return;
 	}
 	else
@@ -31,30 +31,30 @@ struct Node* CreatLinkList()
 		return ListNode;
 	}
 }
-//Í·²å·¨(µ¥Á´±íÎªµ¹Ğò)
+//å¤´æ’æ³•(å•é“¾è¡¨ä¸ºå€’åº)
 void Insert_HeadNode(struct Node* LinkList)
 {
 	struct Node* NewNode;
 	struct Library data;
-	printf("ÇëÊäÈëµÚ%d±¾ÊéµÄÊéÃû(ÊäÈë-1Í£Ö¹Â¼Èë)£º", LinkList->data.length + 1);
+	printf("è¯·è¾“å…¥ç¬¬%dæœ¬ä¹¦çš„ä¹¦å(è¾“å…¥-1åœæ­¢å½•å…¥)ï¼š", LinkList->data.length + 1);
 	scanf("%s", &data.title);
 	if (!strcmp(data.title, "-1"))
 	{
-		printf("Ã»ÓĞÂ¼ÈëÊé¼®£¡\a\n");
+		printf("æ²¡æœ‰å½•å…¥ä¹¦ç±ï¼\a\n");
 		return 0;
 	}
-	printf("ÇëÊäÈë×÷Õß(ÊäÈë-1Í£Ö¹Â¼Èë)£º");
+	printf("è¯·è¾“å…¥ä½œè€…(è¾“å…¥-1åœæ­¢å½•å…¥)ï¼š");
 	scanf("%s", &data.author);
 	if (!strcmp(data.author, "-1"))
 	{
-		printf("Ã»ÓĞÂ¼ÈëÊé¼®£¡\a\n");
+		printf("æ²¡æœ‰å½•å…¥ä¹¦ç±ï¼\a\n");
 		return 0;
 	}
-	printf("ÇëÊäÈë¼Û¸ñ(ÊäÈë-1Í£Ö¹Â¼Èë)£º");
+	printf("è¯·è¾“å…¥ä»·æ ¼(è¾“å…¥-1åœæ­¢å½•å…¥)ï¼š");
 	scanf("%f", &data.price);
 	if (data.price <= 0)
 	{
-		printf("Ã»ÓĞÂ¼ÈëÊé¼®£¡\a\n");
+		printf("æ²¡æœ‰å½•å…¥ä¹¦ç±ï¼\a\n");
 		return 0;
 	}
 
@@ -68,58 +68,58 @@ void Insert_HeadNode(struct Node* LinkList)
 		NewNode->next = LinkList->next;
 		LinkList->next = NewNode;
 		LinkList->data.length++;
-		printf("\n\nÇëÊäÈëµÚ%d±¾ÊéµÄÊéÃû(ÊäÈë-1Í£Ö¹Â¼Èë)£º", LinkList->data.length + 1);
+		printf("\n\nè¯·è¾“å…¥ç¬¬%dæœ¬ä¹¦çš„ä¹¦å(è¾“å…¥-1åœæ­¢å½•å…¥)ï¼š", LinkList->data.length + 1);
 		scanf("%s", &data.title);
 		if (!strcmp(data.title, "-1"))
 		{
-			printf("ÒÑÂ¼Èë%d±¾Êé\n", LinkList->data.length);
+			printf("å·²å½•å…¥%dæœ¬ä¹¦\n", LinkList->data.length);
 			return LinkList;
 		}
-		printf("ÇëÊäÈë×÷Õß(ÊäÈë-1Í£Ö¹Â¼Èë)£º");
+		printf("è¯·è¾“å…¥ä½œè€…(è¾“å…¥-1åœæ­¢å½•å…¥)ï¼š");
 		scanf("%s", &data.author);
 		if (!strcmp(data.author, "-1"))
 		{
-			printf("ÒÑÂ¼Èë%d±¾Êé\n", LinkList->data.length);
+			printf("å·²å½•å…¥%dæœ¬ä¹¦\n", LinkList->data.length);
 			return LinkList;
 		}
-		printf("ÇëÊäÈë¼Û¸ñ(ÊäÈë-1Í£Ö¹Â¼Èë)£º");
+		printf("è¯·è¾“å…¥ä»·æ ¼(è¾“å…¥-1åœæ­¢å½•å…¥)ï¼š");
 		scanf("%f", &data.price);
 		if (data.price <= 0)
 		{
-			printf("ÒÑÂ¼Èë%d±¾Êé\n", LinkList->data.length);
+			printf("å·²å½•å…¥%dæœ¬ä¹¦\n", LinkList->data.length);
 			return LinkList;
 		}
 	}
 }
-//Î²²å·¨(µ¥Á´±íÎªË³Ğò)
+//å°¾æ’æ³•(å•é“¾è¡¨ä¸ºé¡ºåº)
 void TailInsertLinkList(struct Node* LinkList)
 {
 	struct Node* NewNode;
-	struct Node* TailNode = LinkList;//Ö¸Ïò×îºóµÄÒ»¸ö½áµã
+	struct Node* TailNode = LinkList;//æŒ‡å‘æœ€åçš„ä¸€ä¸ªç»“ç‚¹
 	struct Library data;
-	while (TailNode->next != NULL)//¶¨Î»µ½×îºóÒ»¸ö½áµã
+	while (TailNode->next != NULL)//å®šä½åˆ°æœ€åä¸€ä¸ªç»“ç‚¹
 	{
 		TailNode = TailNode->next;
 	}
-	printf("ÇëÊäÈëµÚ%d±¾ÊéµÄÊéÃû(ÊäÈë-1Í£Ö¹Â¼Èë)£º",LinkList->data.length+1);
+	printf("è¯·è¾“å…¥ç¬¬%dæœ¬ä¹¦çš„ä¹¦å(è¾“å…¥-1åœæ­¢å½•å…¥)ï¼š",LinkList->data.length+1);
 	scanf("%s", &data.title);
 	if (!strcmp(data.title, "-1"))
 	{
-		printf("Ã»ÓĞÂ¼ÈëÊé¼®£¡\a\n");
+		printf("æ²¡æœ‰å½•å…¥ä¹¦ç±ï¼\a\n");
 		return 0;
 	}
-	printf("ÇëÊäÈë×÷Õß(ÊäÈë-1Í£Ö¹Â¼Èë)£º");
+	printf("è¯·è¾“å…¥ä½œè€…(è¾“å…¥-1åœæ­¢å½•å…¥)ï¼š");
 	scanf("%s", &data.author);
 	if (!strcmp(data.author, "-1"))
 	{
-		printf("Ã»ÓĞÂ¼ÈëÊé¼®£¡\a\n");
+		printf("æ²¡æœ‰å½•å…¥ä¹¦ç±ï¼\a\n");
 		return 0;
 	}
-	printf("ÇëÊäÈë¼Û¸ñ(ÊäÈë-1Í£Ö¹Â¼Èë)£º");
+	printf("è¯·è¾“å…¥ä»·æ ¼(è¾“å…¥-1åœæ­¢å½•å…¥)ï¼š");
 	scanf("%f", &data.price);
 	if (data.price <= 0)
 	{
-		printf("Ã»ÓĞÂ¼ÈëÊé¼®£¡\a\n");
+		printf("æ²¡æœ‰å½•å…¥ä¹¦ç±ï¼\a\n");
 		return 0;
 	}
 	while (data.title != -1 || data.author != -1 || data.price != -1)
@@ -130,67 +130,67 @@ void TailInsertLinkList(struct Node* LinkList)
 		NewNode->data = data;
 		TailNode = NewNode;
 		LinkList->data.length++;
-		printf("\n\nÇëÊäÈëµÚ%d±¾ÊéµÄÊéÃû(ÊäÈë-1Í£Ö¹Â¼Èë)£º", LinkList->data.length + 1);
+		printf("\n\nè¯·è¾“å…¥ç¬¬%dæœ¬ä¹¦çš„ä¹¦å(è¾“å…¥-1åœæ­¢å½•å…¥)ï¼š", LinkList->data.length + 1);
 		scanf("%s", &data.title);
 		if (!strcmp(data.title, "-1"))
 		{
-			printf("ÒÑÂ¼Èë%d±¾Êé\n", LinkList->data.length);
+			printf("å·²å½•å…¥%dæœ¬ä¹¦\n", LinkList->data.length);
 			return LinkList;
 		}
-		printf("ÇëÊäÈë×÷Õß(ÊäÈë-1Í£Ö¹Â¼Èë)£º");
+		printf("è¯·è¾“å…¥ä½œè€…(è¾“å…¥-1åœæ­¢å½•å…¥)ï¼š");
 		scanf("%s", &data.author);
 		if (!strcmp(data.author, "-1"))
 		{
-			printf("ÒÑÂ¼Èë%d±¾Êé\n", LinkList->data.length);
+			printf("å·²å½•å…¥%dæœ¬ä¹¦\n", LinkList->data.length);
 			return LinkList;
 		}
-		printf("ÇëÊäÈë¼Û¸ñ(ÊäÈë-1Í£Ö¹Â¼Èë)£º");
+		printf("è¯·è¾“å…¥ä»·æ ¼(è¾“å…¥-1åœæ­¢å½•å…¥)ï¼š");
 		scanf("%f", &data.price);
 		if (data.price <= 0)
 		{
-			printf("ÒÑÂ¼Èë%d±¾Êé\n", LinkList->data.length);
+			printf("å·²å½•å…¥%dæœ¬ä¹¦\n", LinkList->data.length);
 			return LinkList;
 		}
 
 	}
 }
-//°´Î»É¾³ı
+//æŒ‰ä½åˆ é™¤
 void DeleteNode(struct Node* LinkList, struct Library DeletedData)
 {
 	struct Node* DeleteNode_Front = LinkList;
 	struct Node* DeleteNode = LinkList->next;
-	while (strcmp(DeleteNode->data.title, DeletedData.title))//Ñ°ÕÒÉ¾³ıÊı¾İµÄÎ»ÖÃ
+	while (strcmp(DeleteNode->data.title, DeletedData.title))//å¯»æ‰¾åˆ é™¤æ•°æ®çš„ä½ç½®
 	{
 		DeleteNode_Front = DeleteNode;
 		DeleteNode = DeleteNode->next;
 		if (DeleteNode == NULL)
 		{
-			printf("Í¼Êé¹İÎª¿Õ£¬ÎŞ·¨É¾³ıµÄÊé¼®!\a\n");
+			printf("å›¾ä¹¦é¦†ä¸ºç©ºï¼Œæ— æ³•åˆ é™¤çš„ä¹¦ç±!\a\n");
 			return;
 		}
 	}
-	printf("ÒÑÉ¾³ı:%s\n", DeletedData.title);
+	printf("å·²åˆ é™¤:%s\n", DeletedData.title);
 	DeleteNode_Front->next = DeleteNode->next;
 	free(DeleteNode);
 	LinkList->data.length--;
 }
-//°´Î»Á¬ĞøÉ¾³ı
+//æŒ‰ä½è¿ç»­åˆ é™¤
 void ContinueDeleteNode(struct Node* LinkList)
 {
 	struct Library DeletedData;
 	while (1)
 	{
-		printf("ÇëÊäÈëĞèÒªÉ¾³ıµÄÊéÃû(ÊäÈë-1Í£Ö¹É¾³ı)£º");
+		printf("è¯·è¾“å…¥éœ€è¦åˆ é™¤çš„ä¹¦å(è¾“å…¥-1åœæ­¢åˆ é™¤)ï¼š");
 		scanf("%s", &DeletedData.title);
 		if (!strcmp(DeletedData.title, "-1"))
 		{
-			printf("É¾³ı½áÊø\n");
+			printf("åˆ é™¤ç»“æŸ\n");
 			return;
 		}
 		DeleteNode(LinkList, DeletedData);
 	}
 }
-//Ïú»Ùµ¥Á´±í
+//é”€æ¯å•é“¾è¡¨
 void DestroyLinkList(struct Node* LinkList)
 {
 	while (LinkList->next != NULL)
@@ -198,25 +198,25 @@ void DestroyLinkList(struct Node* LinkList)
 		DeleteNode(LinkList, LinkList->next->data);
 	}
 	free(LinkList);
-	printf("Í¼Êé¹İµÄÊı¾İÒÑ¾­Ïú»Ù\n");
+	printf("å›¾ä¹¦é¦†çš„æ•°æ®å·²ç»é”€æ¯\n");
 	return 0;
 }
-//°´Î»²éÕÒ
+//æŒ‰ä½æŸ¥æ‰¾
 void GetData(struct Node* LinkList)
 {
 	while (1)
 	{
 		int Location;
-		printf("ÇëÊäÈë²éÕÒµÄµÚ¼¸±¾Êé(ÊäÈë-1Í£Ö¹²éÕÒ)£º");
+		printf("è¯·è¾“å…¥æŸ¥æ‰¾çš„ç¬¬å‡ æœ¬ä¹¦(è¾“å…¥-1åœæ­¢æŸ¥æ‰¾)ï¼š");
 		scanf("%d", &Location);
 		if (Location == -1)
 		{
-			printf("²éÕÒ½áÊø\n");
+			printf("æŸ¥æ‰¾ç»“æŸ\n");
 			return 0;
 		}
 		if (Location < 1 || Location >LinkList->data.length)
 		{
-			printf("¸ÃÎ»ÖÃÔÚÍ¼Êé¹İÀïÎŞ·¨ÕÒµ½£¡\a\n");
+			printf("è¯¥ä½ç½®åœ¨å›¾ä¹¦é¦†é‡Œæ— æ³•æ‰¾åˆ°ï¼\a\n");
 		}
 		else
 		{
@@ -225,11 +225,11 @@ void GetData(struct Node* LinkList)
 			{
 				GetNode = GetNode->next;
 			}
-			printf("ÊéÃû£º%s\t×÷Õß£º%s\t¼Û¸ñ£º%.2fÔª\t\n", GetNode->data.title, GetNode->data.author, GetNode->data.price);
+			printf("ä¹¦åï¼š%s\tä½œè€…ï¼š%s\tä»·æ ¼ï¼š%.2få…ƒ\t\n", GetNode->data.title, GetNode->data.author, GetNode->data.price);
 		}
 	}
 }
-//°´Î»²éÕÒ£¨2£©ÎŞÊä³öÄÚÈİ
+//æŒ‰ä½æŸ¥æ‰¾ï¼ˆ2ï¼‰æ— è¾“å‡ºå†…å®¹
 struct Node* GetData2(struct Node* LinkList, int Location)
 {
 	if (Location == 0)
@@ -238,7 +238,7 @@ struct Node* GetData2(struct Node* LinkList, int Location)
 	}
 	if (Location < 1 || Location >LinkList->data.length)
 	{
-		printf("¸ÃÎ»ÖÃÔÚµ¥Á´±íÀïÎŞ·¨ÕÒµ½£¡\n");
+		printf("è¯¥ä½ç½®åœ¨å•é“¾è¡¨é‡Œæ— æ³•æ‰¾åˆ°ï¼\n");
 		return NULL;
 	}
 	struct Node* GetNode = LinkList;
@@ -248,69 +248,69 @@ struct Node* GetData2(struct Node* LinkList, int Location)
 	}
 	return GetNode;
 }
-//´òÓ¡Í¼Êé¹İµÄÃ¿Ò»±¾Êé
+//æ‰“å°å›¾ä¹¦é¦†çš„æ¯ä¸€æœ¬ä¹¦
 void PrintList(struct Node* LinkList)
 {
 	struct Node* pmove = LinkList;
 	int count = 0;
 	if (pmove->next == NULL)
 	{
-		printf("Í¼Êé¹İÖĞÃ»ÓĞÈÎºÎÊé¼®\a\n");
+		printf("å›¾ä¹¦é¦†ä¸­æ²¡æœ‰ä»»ä½•ä¹¦ç±\a\n");
 		return 0;
 	}
 	while (pmove->next != NULL)
 	{
 		count++;
 		pmove = pmove->next;
-		printf("µÚ%d±¾ÊéÃû£º%s\t×÷Õß£º%s\t¼Û¸ñ£º%.2fÔª\t\n", count, pmove->data.title, pmove->data.author, pmove->data.price);
+		printf("ç¬¬%dæœ¬ä¹¦åï¼š%s\tä½œè€…ï¼š%s\tä»·æ ¼ï¼š%.2få…ƒ\t\n", count, pmove->data.title, pmove->data.author, pmove->data.price);
 	}
 	printf("\n");
 }
 
-//°´Î»²åÈë(ÔÚÁ½¸ö½áµãÖĞ¼ä²åÈë)
+//æŒ‰ä½æ’å…¥(åœ¨ä¸¤ä¸ªç»“ç‚¹ä¸­é—´æ’å…¥)
 void LocalInsertLinkList(struct Node* LinkList)
 {
 	while (1)
 	{
 		int Location;
 		struct Library data;
-		printf("ÇëÊäÈë²åÈëµÚ¼¸±¾µÄÎ»ÖÃ(ÊäÈë-1Í£Ö¹²åÈë)£º\n");
+		printf("è¯·è¾“å…¥æ’å…¥ç¬¬å‡ æœ¬çš„ä½ç½®(è¾“å…¥-1åœæ­¢æ’å…¥)ï¼š\n");
 		scanf("%d", &Location);
 		if (Location == -1)
 		{
-			printf("²åÈë½áÊø\n");
+			printf("æ’å…¥ç»“æŸ\n");
 			return 0;
 		}
 		if ((Location - 1) == 0)
 		{
-			printf("¸ÃÎ»ÖÃÔÚÍ¼Êé¹İÀï²»´æÔÚ!\a×Ô¶¯²åÈëÔÚµÚ1±¾ÊéµÄÇ°Ãæ\n");
+			printf("è¯¥ä½ç½®åœ¨å›¾ä¹¦é¦†é‡Œä¸å­˜åœ¨!\aè‡ªåŠ¨æ’å…¥åœ¨ç¬¬1æœ¬ä¹¦çš„å‰é¢\n");
 		}
 		if (Location < 1 || Location >(LinkList->data.length + 1))
 		{
-			printf("´íÎó£¬ÔÚÍ¼Êé¹İÖĞÎŞ·¨²åÈë£¡\a\n");
+			printf("é”™è¯¯ï¼Œåœ¨å›¾ä¹¦é¦†ä¸­æ— æ³•æ’å…¥ï¼\a\n");
 			return 0;
 		}
 		else
 		{
-			printf("ÇëÊäÈë²åÈëÊé¼®µÄÊéÃû(ÊäÈë-1Í£Ö¹Â¼Èë)£º");
+			printf("è¯·è¾“å…¥æ’å…¥ä¹¦ç±çš„ä¹¦å(è¾“å…¥-1åœæ­¢å½•å…¥)ï¼š");
 			scanf("%s", &data.title);
 			if (!strcmp(data.title, "-1"))
 			{
-				printf("²åÈë½áÊø\n");
+				printf("æ’å…¥ç»“æŸ\n");
 				return 0;
 			}
-			printf("ÇëÊäÈë×÷Õß(ÊäÈë-1Í£Ö¹Â¼Èë)£º");
+			printf("è¯·è¾“å…¥ä½œè€…(è¾“å…¥-1åœæ­¢å½•å…¥)ï¼š");
 			scanf("%s", &data.author);
 			if (!strcmp(data.author, "-1"))
 			{
-				printf("²åÈë½áÊø\n");
+				printf("æ’å…¥ç»“æŸ\n");
 				return 0;
 			}
-			printf("ÇëÊäÈë¼Û¸ñ(ÊäÈë-1Í£Ö¹Â¼Èë)£º");
+			printf("è¯·è¾“å…¥ä»·æ ¼(è¾“å…¥-1åœæ­¢å½•å…¥)ï¼š");
 			scanf("%f", &data.price);
 			if (data.price <= 0)
 			{
-				printf("²åÈë½áÊø\n");
+				printf("æ’å…¥ç»“æŸ\n");
 				return 0;
 			}
 			struct Node* pNode = GetData2(LinkList, Location - 1);
@@ -322,18 +322,18 @@ void LocalInsertLinkList(struct Node* LinkList)
 		}
 	}
 }
-//°´Öµ²éÕÒ
+//æŒ‰å€¼æŸ¥æ‰¾
 void LocateData(struct Node* LinkList)
 {
 	while (1)
 	{
 		struct Node* Locatedata = LinkList;
 		struct Library data;
-		printf("ÇëÊäÈëĞèÒª²éÕÒµÄÊéÃû(ÊäÈë-1Í£Ö¹²éÕÒ):");
+		printf("è¯·è¾“å…¥éœ€è¦æŸ¥æ‰¾çš„ä¹¦å(è¾“å…¥-1åœæ­¢æŸ¥æ‰¾):");
 		scanf("%s", &data.title);
 		if (!strcmp(data.title, "-1"))
 		{
-			printf("²éÕÒ½áÊø\n");
+			printf("æŸ¥æ‰¾ç»“æŸ\n");
 			return 0;
 		}
 		while (Locatedata->next != NULL)
@@ -341,11 +341,11 @@ void LocateData(struct Node* LinkList)
 			Locatedata = Locatedata->next;
 			if (!strcmp(Locatedata->data.title, data.title))
 			{
-				printf("Êé¼®µÄÊéÃû£º%s\t×÷Õß£º%s\t¼Û¸ñ£º%.2fÔª\t\n", Locatedata->data.title, Locatedata->data.author, Locatedata->data.price);
+				printf("ä¹¦ç±çš„ä¹¦åï¼š%s\tä½œè€…ï¼š%s\tä»·æ ¼ï¼š%.2få…ƒ\t\n", Locatedata->data.title, Locatedata->data.author, Locatedata->data.price);
 				goto tiaodian;
 			}
 		}
-		printf("Í¼Êé¹İÕÒ²»µ½¸ÃÊı¾İ\a\n");
+		printf("å›¾ä¹¦é¦†æ‰¾ä¸åˆ°è¯¥æ•°æ®\a\n");
 		return 0;
 	tiaodian:;
 	}
@@ -358,13 +358,13 @@ int main(void)
 		int num1 = 0;
 		int num2 = 0;
 		int num3 = 0;
-		printf("»¶Ó­À´µ½À¤À¤Í¼Êé¹İ^_^\n");
-		printf("ÇëÑ¡ÔñÒÔÏÂ²Ù×÷:\n1\t(²åÈëÍ¼Êé)\n2\t(²éÕÒÍ¼Êé)\n3\t(É¾³ıÍ¼Êé)\n4\t(´òÓ¡ËùÓĞÍ¼Êé)\n5\t(Ïú»ÙÍ¼Êé¹İËùÓĞÊı¾İ²¢ÍË³ö³ÌĞò)\n");
+		printf("æ¬¢è¿æ¥åˆ°å¤å¤å›¾ä¹¦é¦†^_^\n");
+		printf("è¯·é€‰æ‹©ä»¥ä¸‹æ“ä½œ:\n1\t(æ’å…¥å›¾ä¹¦)\n2\t(æŸ¥æ‰¾å›¾ä¹¦)\n3\t(åˆ é™¤å›¾ä¹¦)\n4\t(æ‰“å°æ‰€æœ‰å›¾ä¹¦)\n5\t(é”€æ¯å›¾ä¹¦é¦†æ‰€æœ‰æ•°æ®å¹¶é€€å‡ºç¨‹åº)\n");
 		scanf("%d", &num1);
 		switch (num1)
 		{
-		case 1: //²åÈëÍ¼Êé
-			printf("ÇëÑ¡Ôñ²åÈëÍ¼ÊéµÄ·½·¨£º\n1\t(×îÇ°Ãæ²åÈë)\n2\t(×îºóÃæ²åÈë)\n3\t(ÔÚÖĞ¼ä²åÈë)\n");
+		case 1: //æ’å…¥å›¾ä¹¦
+			printf("è¯·é€‰æ‹©æ’å…¥å›¾ä¹¦çš„æ–¹æ³•ï¼š\n1\t(æœ€å‰é¢æ’å…¥)\n2\t(æœ€åé¢æ’å…¥)\n3\t(åœ¨ä¸­é—´æ’å…¥)\n");
 			scanf("%d", &num2);
 			switch (num2)
 			{
@@ -374,12 +374,12 @@ int main(void)
 				break;
 			case 3: LocalInsertLinkList(LinkList);
 				break;
-			default: printf("ÊäÈë´íÎó£¡ÇëÊäÈëÕıÈ·µÄÊı×Ö£¡\n");
+			default: printf("è¾“å…¥é”™è¯¯ï¼è¯·è¾“å…¥æ­£ç¡®çš„æ•°å­—ï¼\n");
 				break;
 			}
 			break;
-		case 2: //²éÕÒÍ¼Êé
-			printf("ÇëÑ¡Ôñ²éÕÒÍ¼ÊéµÄ·½·¨£º\n1\t(ÊéÃû)\n2\t(´ÎĞò(µÚ¼¸±¾Êé))\n");
+		case 2: //æŸ¥æ‰¾å›¾ä¹¦
+			printf("è¯·é€‰æ‹©æŸ¥æ‰¾å›¾ä¹¦çš„æ–¹æ³•ï¼š\n1\t(ä¹¦å)\n2\t(æ¬¡åº(ç¬¬å‡ æœ¬ä¹¦))\n");
 			scanf("%d", &num3);
 			switch (num3)
 			{
@@ -387,21 +387,21 @@ int main(void)
 				break;
 			case 2: GetData(LinkList);
 				break;
-			default: printf("ÊäÈë´íÎó£¡ÇëÊäÈëÕıÈ·µÄÊı×Ö£¡\n");
+			default: printf("è¾“å…¥é”™è¯¯ï¼è¯·è¾“å…¥æ­£ç¡®çš„æ•°å­—ï¼\n");
 				break;
 			}
 			break;
-		case 3: //É¾³ıÍ¼Êé
+		case 3: //åˆ é™¤å›¾ä¹¦
 			ContinueDeleteNode(LinkList);
 			break;
-		case 4://´òÓ¡ËùÓĞÍ¼Êé
+		case 4://æ‰“å°æ‰€æœ‰å›¾ä¹¦
 			PrintList(LinkList);
 			break;
-		case 5: //É¾³ıÍ¼Êé¹İËùÓĞÊı¾İ²¢ÍË³ö³ÌĞò
+		case 5: //åˆ é™¤å›¾ä¹¦é¦†æ‰€æœ‰æ•°æ®å¹¶é€€å‡ºç¨‹åº
 			DestroyLinkList(LinkList);
-			printf("°İ°İ£¬»¶Ó­ÏÂ´Î¹âÁÙÀ¤À¤Í¼Êé¹İ^_^\n");
+			printf("æ‹œæ‹œï¼Œæ¬¢è¿ä¸‹æ¬¡å…‰ä¸´å¤å¤å›¾ä¹¦é¦†^_^\n");
 			return 0;
-		default: printf("ÊäÈë´íÎó£¡ÇëÊäÈëÕıÈ·µÄÊı×Ö£¡\a\n\n");
+		default: printf("è¾“å…¥é”™è¯¯ï¼è¯·è¾“å…¥æ­£ç¡®çš„æ•°å­—ï¼\a\n\n");
 			rewind(stdin);
 			break;
 		}
