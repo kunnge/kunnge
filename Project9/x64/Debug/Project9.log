@@ -1,0 +1,9 @@
+﻿  test.c
+D:\daima\Project9\test.c(13,38): warning C4047: “=”:“LinkList”与“LNode **”的间接级别不同
+D:\daima\Project9\test.c(16,11): warning C4098: “InitList”:“void”函数返回值
+D:\daima\Project9\test.c(19,10): warning C4098: “InitList”:“void”函数返回值
+D:\daima\Project9\test.c(102,21): warning C4047: “函数”:“LinkList”与“LinkList *”的间接级别不同
+D:\daima\Project9\test.c(102,19): warning C4024: “InserList”: 形参和实参 1 的类型不同
+D:\daima\Project9\test.c(112,14): warning C4047: “函数”:“LinkList”与“LinkList *”的间接级别不同
+D:\daima\Project9\test.c(112,12): warning C4024: “PrintList”: 形参和实参 1 的类型不同
+  Project9.vcxproj -> D:\daima\Project9\x64\Debug\Project9.exe

@@ -1,0 +1,6 @@
+﻿  game.c
+D:\daima\Project4\game.c(73,7): warning C4013: “rand”未定义；假设外部返回 int
+D:\daima\Project4\game.c(81,2): warning C4013: “Sleep”未定义；假设外部返回 int
+  test.c
+  正在生成代码...
+  Project4.vcxproj -> D:\daima\Project4\x64\Debug\Project4.exe

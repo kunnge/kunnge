@@ -1,0 +1,33 @@
+﻿  test1.c
+D:\daima\Project1\test1.c(16,2): warning C4091: “typedef ”: 没有声明变量时忽略“Node”的左侧
+D:\daima\Project1\test1.c(24,3): warning C4033: “CreatLinkList”必须返回值
+D:\daima\Project1\test1.c(44,11): warning C4098: “Insert_HeadNode”:“void”函数返回值
+D:\daima\Project1\test1.c(51,11): warning C4098: “Insert_HeadNode”:“void”函数返回值
+D:\daima\Project1\test1.c(58,11): warning C4098: “Insert_HeadNode”:“void”函数返回值
+D:\daima\Project1\test1.c(61,26): warning C4047: “!=”:“char [128]”与“int”的间接级别不同
+D:\daima\Project1\test1.c(61,47): warning C4047: “!=”:“char [40]”与“int”的间接级别不同
+D:\daima\Project1\test1.c(76,19): warning C4098: “Insert_HeadNode”:“void”函数返回值
+D:\daima\Project1\test1.c(83,19): warning C4098: “Insert_HeadNode”:“void”函数返回值
+D:\daima\Project1\test1.c(90,19): warning C4098: “Insert_HeadNode”:“void”函数返回值
+D:\daima\Project1\test1.c(37,15): warning C4101: “NewNode”: 未引用的局部变量
+D:\daima\Project1\test1.c(109,11): warning C4098: “TailInsertLinkList”:“void”函数返回值
+D:\daima\Project1\test1.c(116,11): warning C4098: “TailInsertLinkList”:“void”函数返回值
+D:\daima\Project1\test1.c(123,11): warning C4098: “TailInsertLinkList”:“void”函数返回值
+D:\daima\Project1\test1.c(125,26): warning C4047: “!=”:“char [128]”与“int”的间接级别不同
+D:\daima\Project1\test1.c(125,47): warning C4047: “!=”:“char [40]”与“int”的间接级别不同
+D:\daima\Project1\test1.c(138,19): warning C4098: “TailInsertLinkList”:“void”函数返回值
+D:\daima\Project1\test1.c(145,19): warning C4098: “TailInsertLinkList”:“void”函数返回值
+D:\daima\Project1\test1.c(152,19): warning C4098: “TailInsertLinkList”:“void”函数返回值
+D:\daima\Project1\test1.c(97,15): warning C4101: “NewNode”: 未引用的局部变量
+D:\daima\Project1\test1.c(202,10): warning C4098: “DestroyLinkList”:“void”函数返回值
+D:\daima\Project1\test1.c(215,12): warning C4098: “GetData”:“void”函数返回值
+D:\daima\Project1\test1.c(259,11): warning C4098: “PrintList”:“void”函数返回值
+D:\daima\Project1\test1.c(282,12): warning C4098: “LocalInsertLinkList”:“void”函数返回值
+D:\daima\Project1\test1.c(291,12): warning C4098: “LocalInsertLinkList”:“void”函数返回值
+D:\daima\Project1\test1.c(300,13): warning C4098: “LocalInsertLinkList”:“void”函数返回值
+D:\daima\Project1\test1.c(307,13): warning C4098: “LocalInsertLinkList”:“void”函数返回值
+D:\daima\Project1\test1.c(314,13): warning C4098: “LocalInsertLinkList”:“void”函数返回值
+D:\daima\Project1\test1.c(337,12): warning C4098: “LocateData”:“void”函数返回值
+D:\daima\Project1\test1.c(349,11): warning C4098: “LocateData”:“void”函数返回值
+D:\daima\Project1\test1.c(33): warning C4715: “CreatLinkList”: 不是所有的控件路径都返回值
+  Project1.vcxproj -> D:\daima\Project1\x64\Debug\Project1.exe

@@ -1,0 +1,6 @@
+﻿  正在生成代码
+  Previous IOBJ not found, fall back to full compilation.
+D:\daima\Project1\test1.c(33): warning C4715: “CreatLinkList”: 不是所有的控件路径都返回值
+D:\daima\Project1\test1.c(371): error C4703: 使用了可能未初始化的本地指针变量“LinkList”
+  All 18 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+LINK : fatal error LNK1257: 代码生成失败

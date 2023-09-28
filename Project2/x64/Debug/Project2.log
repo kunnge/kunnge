@@ -1,0 +1,4 @@
+﻿  test.c
+D:\daima\Project2\test.c(15,11): warning C4098: “BubbleSort”:“void”函数返回值
+D:\daima\Project2\test.c(52,11): warning C4098: “SelectionSort”:“void”函数返回值
+  Project2.vcxproj -> D:\daima\Project2\x64\Debug\Project2.exe
