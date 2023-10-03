@@ -1,8 +1,0 @@
-﻿  test.c
-D:\daima\Project2\test.c(15,11): warning C4098: “BubbleSort”:“void”函数返回值
-D:\daima\Project2\test.c(52,11): warning C4098: “SelectionSort”:“void”函数返回值
-  正在生成代码
-  Previous IPDB not found, fall back to full compilation.
-  All 7 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  已完成代码的生成
-  Project2.vcxproj -> D:\daima\Project2\x64\Release\Project2.exe
