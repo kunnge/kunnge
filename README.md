@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @kunnge（I am a student and want to learn programming）
-- 👀 I’m interested in ...programme
+- 👀 I’m interested in ...programming
 - 🌱 I’m currently learning ...
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me ...QQ:2876801062 e-mail：2876801062@qq.com
